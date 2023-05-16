@@ -1,8 +1,5 @@
-// const fs = require('fs');
-// const csv = require('csv-parser');
-
-// console.log(csv)
-// console.log("hello")
+let arrData=[]
+let arrNew=[]
 
 function readCSV() {
     const fileInput = document.getElementById('csvFileInput');
@@ -12,8 +9,25 @@ function readCSV() {
     reader.onload = (e) => {
       const contents = e.target.result;
       // Здесь можно обработать содержимое CSV-файла
-      console.log(contents);
+    //   console.log(contents);
+    // mapFunction(contents)
+
+arrData=contents.split(" ")
+
+console.log(arrData[0])
+arrNew=arrData[0].split(";")
+
+console.log(arrNew)
+///create new table in
+
+
+
     };
 
     reader.readAsText(file);
+   
   }
+
+ 
+
+  
